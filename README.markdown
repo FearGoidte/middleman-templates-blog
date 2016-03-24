@@ -6,6 +6,14 @@ The templates and `config.rb` files have been amended to output valid `.xhtml` f
 
 Since version 4.0, Middleman’s support for <abbr title="eXtensible Hypertext Mark-up Language" class="initialism">X.H.T.M.L.</abbr> has been very changeable so the `Gemfile` has been altered to use the latest versions of the [`middleman`](https://github.com/middleman/middleman) and [`middleman-blog`](https://github.com/middleman/middleman-blog) gems from GitHub.
 
+## Installation
+
+Assuming that you have [Middleman](https://middlemanapp.com) installed. Navigate to the ancestor directory of the one in which you intend to install your project and from the terminal run:
+
+`middleman init -T FearGoidte/middleman-templates-blog-xhtml MY_PROJECT_FOLDER`
+
+Where `MY_PROJECT_FOLDER` is the name of the project’s folder.
+
 ## Copyright and permissions
 
 <a rel="license" href="http://creativecommons.org/publicdomain/zero/1.0/"><img src="http://i.creativecommons.org/p/zero/1.0/88x31.png" alt="CC0" style="border-style : none;" /></a>
