@@ -1,33 +1,29 @@
-<!doctype html>
-<html>
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
   <head>
-    <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Blog Title<%= ' - ' + current_article.title unless current_article.nil? %></title>
-    <%= feed_tag :atom, "#{blog.options.prefix.to_s}/feed.xml", title: "Atom Feed" %>
+    <%= feed_tag :atom, "#{blog.options.prefix.to_s}/atom.xml", title: "Atom Feed" %>
   </head>
   <body>
-
-    <div id="main" role="main">
+    <main>
       <%= yield %>
-    </div>
-
+    </main>
     <aside>
       <h2>Recent Articles</h2>
       <ol>
         <% blog.articles[0...10].each do |article| %>
-          <li><%= link_to article.title, article %> <time datetime="<%= article.date.strftime("%F") %>"<%= article.date.strftime('%b %e') %></time></li>
+          <li><%= link_to article.title, article %> <time datetime="<%= article.date.strftime("%F") %>"><%= article.date.strftime('%b %e') %></time></li>
         <% end %>
       </ol>
-
       <h2>Tags</h2>
       <ol>
         <% blog.tags.each do |tag, articles| %>
           <li><%= link_to "#{tag} (#{articles.size})", tag_path(tag) %></li>
         <% end %>
       </ol>
-
       <h2>By Year</h2>
       <ol>
         <% blog.articles.group_by {|a| a.date.year }.each do |year, articles| %>
