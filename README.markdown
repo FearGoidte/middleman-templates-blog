@@ -8,6 +8,6 @@ Since version 4.0, Middleman’s support for <abbr title="eXtensible Hypertext M
 
 ## Copyright and permissions
 
-<a rel="license" href="http://creativecommons.org/publicdomain/zero/1.0/"><object data="http://i.creativecommons.org/p/zero/1.0/88x31.png" style="border-style : none;">CC0</object></a>
+<a rel="license" href="http://creativecommons.org/publicdomain/zero/1.0/"><img src="http://i.creativecommons.org/p/zero/1.0/88x31.png" alt="CC0" style="border-style : none;" /></a>
 <br />
 To the extent possible under law, <a rel="dc:publisher" href="https://github.com/FearGoidte/middleman-templates-blog-xhtml"><span property="dct:title">James Ó Nuanáin</span></a> has waived all copyright and related or neighbouring rights to <cite property="dct:title">Default Middleman Blog Template for <abbr title="eXtensible Hypertext Mark-up Language" class="initialism">X.H.T.M.L.</abbr> served as application/xhtml+xml</cite>. ([licence.txt](licence.txt))
