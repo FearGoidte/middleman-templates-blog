@@ -16,6 +16,6 @@ Where `MY_PROJECT_FOLDER` is the name of the project’s folder.
 
 ## Copyright and permissions
 
-<a rel="license" href="http://creativecommons.org/publicdomain/zero/1.0/"><img src="CC0_button.svg" alt="CC0" style="border-style : none; display : inline-block; float : left; height : 1.6em; width : auto" /></a>
+<a rel="license" href="http://creativecommons.org/publicdomain/zero/1.0/"><img src="CC0_button.svg?raw=true" alt="CC0" style="border-style : none; display : inline-block; float : left; height : 1.6em; width : auto" /></a>
 <br />
 To the extent possible under law, <a rel="dc:publisher" href="https://github.com/FearGoidte/middleman-templates-blog-xhtml"><span property="dct:title">James Ó Nuanáin</span></a> has waived all copyright and related or neighbouring rights to <cite property="dct:title">Default Middleman Blog Template for <abbr title="eXtensible Hypertext Mark-up Language" class="initialism">X.H.T.M.L.</abbr> served as application/xhtml+xml</cite>. ([licence.txt](licence.txt))
