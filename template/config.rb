@@ -34,12 +34,16 @@ activate :blog do |blog|
   # blog.default_extension = '.markdown'
   blog.tag_template = 'tag.xhtml'
   blog.calendar_template = 'calendar.xhtml'
-
   # Enable pagination
   # blog.paginate = true
   # blog.per_page = 10
   # blog.page_link = 'page/{num}'
 end
+
+# Activate directory indices and remove file extensions from urls
+activate :directory_indexes
+set :index_file, 'index.xhtml'
+set :trailing_slash, false
 
 # Reload the browser automatically whenever files change
 # configure :development do
