@@ -57,6 +57,11 @@ set :trailing_slash, false
 #   end
 # end
 
+# Development-specific configuration
+configure :development do
+  set :https, true
+end
+
 # Build-specific configuration
 configure :build do
   # Minify CSS on build
