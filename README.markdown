@@ -1,5 +1,7 @@
 # Default Middleman Blog Template for <abbr title="eXtensible Hypertext Mark-up Language">X.H.T.M.L.</abbr> served as `application/xhtml+xml`
 
+![](fist.svg)
+
 An <abbr title="eXtensible Hypertext Mark-up Language">X.H.T.M.L.</abbr> template for [middleman-blog]() based upon a fork of the [Default Middleman Blog Template](https://github.com/middleman/middleman-templates-blog).
 
 The templates and `config.rb` files have been amended to output valid `.xhtml` files suitable to be served using the [`application/xhtml+xml` mimetype](https://www.w3.org/TR/xhtml-media-types/#application-xhtml-xml).
