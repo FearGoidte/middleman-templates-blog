@@ -1,6 +1,6 @@
 # Default Middleman Blog Template for <abbr title="eXtensible Hypertext Mark-up Language">X.H.T.M.L.</abbr> served as `application/xhtml+xml`
 
-![](fist.svg)
+![](https://cdn.rawgit.com/FearGoidte/middleman-templates-blog-xhtml/master/fist.svg)
 
 An <abbr title="eXtensible Hypertext Mark-up Language">X.H.T.M.L.</abbr> template for [middleman-blog]() based upon a fork of the [Default Middleman Blog Template](https://github.com/middleman/middleman-templates-blog).
 
