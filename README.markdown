@@ -6,9 +6,17 @@ An <abbr title="eXtensible Hypertext Mark-up Language">X.H.T.M.L.</abbr> templat
 
 The templates and `config.rb` files have been amended to output valid `.xhtml` files suitable to be served using the [`application/xhtml+xml` mimetype](https://www.w3.org/TR/xhtml-media-types/#application-xhtml-xml).
 
-## Installation
+## Added extras
 
-Assuming that you have [Middleman](https://middlemanapp.com) installed. Navigate to the ancestor directory of the one in which you intend to install your project and from the terminal run:
+To encourage you to explore Middleman further, this template makes use of:
+
+* a [custom helper](https://middlemanapp.com/basics/helper_methods/#custom-defined-helpers) for document titles,
+* a [<abbr title="YAML Ain’t Markup Language">YAML</abbr>](https://middlemanapp.com/advanced/data_files/) file for basic information about the site, and
+* three [partials](https://middlemanapp.com/basics/partials/) to generate the pagination and archives.
+
+## Installation
+
+Assuming that you have [Middleman](https://middlemanapp.com) installed, navigate to the ancestor directory of the one in which you intend to install your project and from the terminal run:
 
 `middleman init -T FearGoidte/middleman-templates-blog-xhtml MY_PROJECT_FOLDER`
 
