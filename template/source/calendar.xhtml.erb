@@ -11,7 +11,7 @@ pageable: true
      date = year
      date = date.to_s
     end %>
-<% @title = 'Archive for ‘' + date %>
+<% @title = 'Archive for ‘' + date + '’' %>
 <h1><%= @title %></h1>
 <%= partial 'layouts/pagination_heading' %>
 <%= partial 'layouts/article_list' %>
