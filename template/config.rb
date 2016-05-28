@@ -59,7 +59,7 @@ set :trailing_slash, false
 
 # Development-specific configuration
 configure :development do
-  set :https, true
+  #  set :https, true
 end
 
 # Build-specific configuration
