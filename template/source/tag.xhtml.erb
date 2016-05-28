@@ -1,8 +1,9 @@
 ---
 pageable: true
 ---
+
 <% @title = 'Articles tagged with ‘' + tagname +'’' %>
-<h1>Articles tagged '<%= tagname %>'</h1>
+<h1><%= @title %></h1>
 <%= partial 'layouts/pagination_heading' %>
 <%= partial 'layouts/article_list' %>
 <%= partial 'layouts/pagination_links' %>
