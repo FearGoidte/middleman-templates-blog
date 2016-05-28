@@ -2,15 +2,17 @@
 pageable: true
 ---
 <h1>Archive for
-  <% case page_type
-     when 'day' %>
-    <%= Date.new(year, month, day).strftime('%b %e %Y') %>
-  <% when 'month' %>
-    <%= Date.new(year, month, 1).strftime('%b %Y') %>
-  <% when 'year' %>
-    <%= year %>
-  <% end %>
+<% case page_type
+     when 'day'
+    date = Date.new(year, month, day).strftime('%b %e %Y')
+     when 'month'
+    date = Date.new(year, month, 1).strftime('%b %Y')
+     when 'year'
+    date = year
+    date = date.to_s
+ end %>
 </h1>
+<% @title = 'Archive for ‘' + date + '’—' %>
 <%= partial 'layouts/pagination_heading' %>
 <%= partial 'layouts/article_list' %>
 <%= partial 'layouts/pagination_links' %>
