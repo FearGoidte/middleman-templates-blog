@@ -1,10 +1,10 @@
-# Middleman Blog Template for <abbr title="eXtensible Hypertext Mark-up Language">X.H.T.M.L.</abbr> served as `application/&#173;xhtml+xml`
+# Middleman Blog Template for <abbr title="eXtensible Hypertext Mark-up Language">X.H.T.M.L.</abbr> served as `application/`&#173;`xhtml+xml`
 
 ![](https://cdn.rawgit.com/FearGoidte/middleman-templates-blog-xhtml/master/fist.svg)
 
 An <abbr title="eXtensible Hypertext Mark-up Language">X.H.T.M.L.</abbr> template for [middleman-blog](https://github.com/middleman/middleman-blog) based upon a fork of the [Default Middleman Blog Template](https://github.com/middleman/middleman-templates-blog).
 
-The templates and `config.rb` files have been amended to output valid `.xhtml` files suitable to be served using the [`application/&#173;xhtml+xml` mimetype](https://www.w3.org/TR/xhtml-media-types/#application-xhtml-xml).
+The templates and `config.rb` files have been amended to output valid `.xhtml` files suitable to be served using the [`application/`&#173;`xhtml+xml` mimetype](https://www.w3.org/TR/xhtml-media-types/#application-xhtml-xml).
 
 ## Added extras
 
