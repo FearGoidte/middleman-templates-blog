@@ -12,18 +12,22 @@
 			<%= yield %>
 		</main>
 		<aside>
+			<% unless blog.articles.reject{|article| article == current_article}.empty? # check recent articles loop not empty %>
 			<h2>Recent Articles</h2>
 			<ol>
 				<% blog.articles.reject{|article| article == current_article}[0...10].each do |article| # recent articles loop %>
-				<li><%= link_to article.title, article %> <time datetime="<%= article.date.strftime("%F") %>"><%= prettify_date(article.date) %></time></li>
+				<li><%= link_to article.title, article %> <time datetime="<%= article.date.strftime('%F') %>"><%= prettify_date(article.date) %></time></li>
 				<% end # recent articles loop %>
 			</ol>
+			<% end # check recent articles loop not empty %>
+			<% unless blog.tags.empty? # check tags loop not empty %>
 			<h2>Tags</h2>
 			<ol>
 				<% blog.tags.each do |tag, articles| # tags loop %>
 				<li><%= link_to "#{tag} (#{spell_out(articles.size)})", tag_path(tag) %></li>
 				<% end # tags loop %>
 			</ol>
+			<% end # check tags loop not empty %>
 			<h2>By Year</h2>
 			<ol>
 				<% blog.articles.group_by {|a| a.date.year }.each do |year, articles| # year loop %>
