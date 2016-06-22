@@ -3,3 +3,4 @@
 	<li><%= link_to article.title, article %> <time datetime="<%= article.date.strftime('%F') %>"><%= prettify_date(article.date) %></time></li>
 	<% end %>
 </ol>
+<%= partial 'layouts/pagination' %>
