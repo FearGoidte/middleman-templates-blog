@@ -23,7 +23,7 @@
 			<% unless blog.tags.empty? # check tags loop not empty %>
 			<h2>Tags</h2>
 			<ol>
-				<% blog.tags.each do |tag, articles| # tags loop %>
+				<% blog.tags.sort{ |a,b| a.to_s.downcase <=> b.to_s.downcase }.each do |tag, articles| # tags loop %>
 				<li><%= link_to "#{tag} (#{spell_out(articles.size)})", tag_path(tag) %></li>
 				<% end # tags loop %>
 			</ol>
