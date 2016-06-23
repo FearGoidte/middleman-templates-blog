@@ -5,4 +5,5 @@ per_page: 10
 
 <% @title = 'Articles tagged with ‘' + tagname +'’' %>
 <h1><%= @title %></h1>
+<p>Summaries of all articles tagged with <em><%= tagname %></em>:</p>
 <%= partial 'layouts/article_list' %>
