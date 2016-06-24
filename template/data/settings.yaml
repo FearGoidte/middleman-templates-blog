@@ -5,5 +5,9 @@ site:
   language_TERRITORY: en_GB # http://www.unicode.org/cldr/charts/25/supplemental/language_territory_information.html
   description: >
     Blog description
+  logo:
+    url: /images/generic_logo.png
+    height: 200
+    width: 200
 author:
   name: Example author
