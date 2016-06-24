@@ -2,8 +2,7 @@ site:
   base_url: http://example.com
   name: Blog Name
   language: en-gb-oxendict
-  language_TERRITORY: en_GB
-  # http://www.unicode.org/cldr/charts/25/supplemental/language_territory_information.html
+  language_TERRITORY: en_GB # http://www.unicode.org/cldr/charts/25/supplemental/language_territory_information.html
   description: >
     Blog description
 author:
