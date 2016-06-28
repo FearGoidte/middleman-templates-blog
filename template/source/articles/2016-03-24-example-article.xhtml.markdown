@@ -5,8 +5,7 @@ thumbnail:
   url: lorem-ipsum-image.png
   width: 640
   height: 480
-description: >
-  This is a summary of the example article
+description: This is a summary of the example article
 tags: hello world, example
 ---
 
