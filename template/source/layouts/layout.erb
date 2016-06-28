@@ -4,6 +4,7 @@
 	<head>
 		<link rel="canonical" href="<%= absolute_url(current_page) %>" />
 <%= partial('layouts/open_graph', locals: { current_article: current_article } ) %>
+		<link property="rdfa:copy" href="#nav_footer" />
 		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
 		<title><%= doc_title %></title>
@@ -37,7 +38,7 @@
 				<% end # year loop %>
 			</ol>
 		</aside>
-		<footer>
+		<footer id="nav_footer" resource="#nav_footer" typeof="rdfa:Pattern">
 			<address>Copyright © <time property="dcterms:dateCopyrighted"><%= data.settings.site.licence.copyright %></time><% if File.mtime(current_page.source_file).strftime('%Y') > data.settings.site.licence.copyright.to_s %>–<time><%= File.mtime(current_page.source_file).strftime('%Y') %></time><% end %> <span property="cc:attributionName dcterms:creator dcterms:rightsHolder" typeof="foaf:Person"><a property="cc:attributionURL foaf:homepage" href="<%= data.settings.site.base_url %>"><span property="foaf:name"><%= data.settings.author.name %></span></a>, <a property="foaf:mbox" rel="licence" href="mailto:<%= data.settings.author.e_mail %>"><%= data.settings.author.e_mail %></a></span> (published under <a href="<%= data.settings.site.licence.url %>"><%= data.settings.site.licence.name %></a>).</address>
 			<p>This document was last modified on <time property="dcterms:modified" datetime="<%= File.mtime(current_page.source_file).iso8601 %>"><%= prettify_date_time(File.mtime(current_page.source_file)) %></time>.</p>
 		</footer>
