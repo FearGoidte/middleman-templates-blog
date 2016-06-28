@@ -4,7 +4,15 @@
 	"@type": "Article",
 	"headline": "<%= strip_tags(current_resource.data.title) %>",
 	"description": "<%= strip_tags(current_resource.data.description) %>",
- 	<% if current_article && image_mimetype(current_resource.data.thumbnail.url) == 'image/gif' || current_article && image_mimetype(current_resource.data.thumbnail.url) == 'image/jpeg' || current_article && image_mimetype(current_resource.data.thumbnail.url) == 'image/png' # image check %>
+	"keywords": "<%= strip_tags(current_article.tags.join(', ')) %>",
+	"wordCount": "<%= current_article.body.split.size + current_article.data.description.to_s.split.size %>",
+	"url": "<%= absolute_url(current_page) %>",
+	"datePublished": "<%= current_resource.date.strftime("%F") %>",
+	"dateCreated": "<%= current_resource.date.strftime("%F") %>",
+	"dateModified": "<%= File.mtime(current_page.source_file).iso8601 %>",
+	"license": "<%= data.settings.licence.url %>",
+	"copyrightYear": "<%= current_resource.date.strftime("%Y") %>",
+	<% if current_article && image_mimetype(current_resource.data.thumbnail.url) == 'image/gif' || current_article && image_mimetype(current_resource.data.thumbnail.url) == 'image/jpeg' || current_article && image_mimetype(current_resource.data.thumbnail.url) == 'image/png' # image check %>
 	"image": {
 		"@context": "http://schema.org",
 		"@type": "ImageObject",
@@ -30,8 +38,6 @@
 	<% else %>
 	"author": "<%= data.settings.author.name %>",
 	<% end # author conditionals %>
-	"keywords": "<%= strip_tags(current_article.tags.join(', ')) %>",
-	"wordCount": "<%= current_article.body.split.size + current_article.data.description.to_s.split.size %>",
 	"publisher": {
 		"type": "Organization",
 		"name": "<%= data.settings.site.name %>",
@@ -45,11 +51,6 @@
 			"url": "<%= absolute_url(data.settings.site.logo.url) %>"
   		}
 	},
-	"url": "<%= strip_tags(data.settings.site.base_url) %>",
-	"datePublished": "<%= current_resource.date.strftime("%F") %>",
-	"dateCreated": "<%= current_resource.date.strftime("%F") %>",
-	"dateModified": "<%= File.mtime(current_page.source_file).iso8601 %>",
-	"license": "<%= data.settings.licence.url %>",
 	"mainEntityOfPage": {
 		"type": "WebPage",
 		"id": "<%= absolute_url(current_page) %>"
