@@ -8,13 +8,13 @@ site:
     url: /images/generic_logo.png
     height: 200
     width: 200
-  copyright: 2016
+  licence:
+    copyright: 2016
+    name: Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International Licence
+    url: https://creativecommons.org/licenses/by-nc-sa/4.0/
 author:
   name: Example author
   twitter: example # excluding '@' symbol
 open_graph:
   app_id: '000000000000000' # https://developers.facebook.com/docs/platforminsights/domains
   language_TERRITORY: en_GB # http://www.unicode.org/cldr/charts/25/supplemental/language_territory_information.html
-licence:
-  url: https://creativecommons.org/licenses/by-nc-sa/4.0/
-  name: Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International Licence
