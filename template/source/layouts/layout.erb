@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="<%= config.encoding %>"?>
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="<%= data.settings.site.language %>">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="<%= data.settings.site.language %>"<% if current_article %> prefix="article: http://ogp.me/ns/article#"<% end %>>
 	<head>
+		<link rel="canonical" href="<%= absolute_url(current_page) %>" />
+<%= partial('layouts/open_graph', locals: { current_article: current_article } ) %>
 		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
 		<title><%= doc_title %></title>
