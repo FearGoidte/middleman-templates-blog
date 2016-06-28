@@ -8,6 +8,7 @@ site:
     url: /images/generic_logo.png
     height: 200
     width: 200
+  copyright: 2016
 author:
   name: Example author
   twitter: example # excluding '@' symbol
