@@ -1,10 +1,8 @@
 ---
+layout: archive
 pageable: true
 per_page: 10
 ---
 
 <% @title = 'Articles tagged with ‘' + tagname +'’' %>
 <% @description = 'Summaries of all articles tagged with <em>' + tagname + '</em>' %>
-<h1 property="dcterms:title"><%= @title %></h1>
-<p property="dcterms:description"><%= @description %>:</p>
-<%= partial 'layouts/article_list' %>
