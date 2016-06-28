@@ -37,5 +37,8 @@
 				<% end # year loop %>
 			</ol>
 		</aside>
+		<footer>
+			<p>This document was last modified on <time property="dcterms:modified" datetime="<%= File.mtime(current_page.source_file).iso8601 %>"><%= prettify_date_time(File.mtime(current_page.source_file)) %></time>.</p>
+		</footer>
 	</body>
 </html>
