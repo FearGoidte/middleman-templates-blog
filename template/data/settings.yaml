@@ -14,7 +14,9 @@ site:
     url: https://creativecommons.org/licenses/by-nc-sa/4.0/
 author:
   name: Example author
+  home_page: http://example.com
+  e_mail: example@example.com
   twitter: example # excluding '@' symbol
 open_graph:
-  app_id: '000000000000000' # https://developers.facebook.com/docs/platforminsights/domains
+  app_id: '000000000000000' # Must be quoted or any leading zeros will be stripped https://developers.facebook.com/docs/platforminsights/domains
   language_TERRITORY: en_GB # http://www.unicode.org/cldr/charts/25/supplemental/language_territory_information.html
