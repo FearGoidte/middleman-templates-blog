@@ -1,4 +1,4 @@
-def image_mimetype(image_file)
+def image_mediatype(image_file)
   # Image filetypes acceptable to Twitter
   # gif, jpeg, png
   # https://twittercommunity.com/t/issue-with-an-svg-image-showing-up-in-a-card/57253/2

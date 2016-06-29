@@ -12,7 +12,7 @@
 	"dateModified": "<%= File.mtime(current_page.source_file).iso8601 %>",
 	"license": "<%= data.settings.site.licence.url %>",
 	"copyrightYear": "<%= current_resource.date.strftime("%Y") %>",
-	<% if current_article && image_mimetype(current_resource.data.thumbnail.url) == 'image/gif' || current_article && image_mimetype(current_resource.data.thumbnail.url) == 'image/jpeg' || current_article && image_mimetype(current_resource.data.thumbnail.url) == 'image/png' # image check %>
+	<% if current_article && image_mediatype(current_resource.data.thumbnail.url) == 'image/gif' || current_article && image_mediatype(current_resource.data.thumbnail.url) == 'image/jpeg' || current_article && image_mediatype(current_resource.data.thumbnail.url) == 'image/png' # image check %>
 	"image": {
 		"@context": "http://schema.org",
 		"@type": "ImageObject",
@@ -22,7 +22,7 @@
 			<% end # has dimensions %>
 		"url": "<%= absolute_url(current_resource.data.thumbnail.url) %>"
 	},
-	<% elsif image_mimetype(data.settings.site.logo.url) == 'image/gif' || image_mimetype(data.settings.site.logo.url) == 'image/jpeg' || image_mimetype(data.settings.site.logo.url) == 'image/png' # site logo %>
+	<% elsif image_mediatype(data.settings.site.logo.url) == 'image/gif' || image_mediatype(data.settings.site.logo.url) == 'image/jpeg' || image_mediatype(data.settings.site.logo.url) == 'image/png' # site logo %>
 	"ImageObject": {
 		"@context": "http://schema.org",
 		"@type": "ImageObject",
