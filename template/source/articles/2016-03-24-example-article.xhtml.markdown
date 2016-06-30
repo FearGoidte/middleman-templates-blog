@@ -1,10 +1,7 @@
 ---
 title: Example Article
 date: 2016-03-24 09:00
-thumbnail:
-  url: lorem-ipsum-image.png
-  width: 640
-  height: 480
+thumbnail: lorem-ipsum-image.png
 description: This is a summary of the example article
 tags: hello world, example
 ---

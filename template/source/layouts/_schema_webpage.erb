@@ -12,11 +12,7 @@
 		"logo":  {
 			"@context": "http://schema.org",
 			"@type": "ImageObject",
-					<% if data.settings.site.logo.height && data.settings.site.logo.width # has dimensions %>
-			"height": "<%= data.settings.site.logo.height %>",
-			"width": "<%= data.settings.site.logo.width %>",
-					<% end # has dimensions %>
-			"url": "<%= absolute_url(data.settings.site.logo.url) %>"
+			"url": "<%= absolute_url(data.settings.site.logo) %>"
   		}
 	},
 	"copyrightHolder": "<%= data.settings.author.name %>",

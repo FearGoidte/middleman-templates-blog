@@ -4,10 +4,7 @@ site:
   name: Blog Name
   description: >
     Blog description
-  logo:
-    url: /images/generic_logo.png
-    height: 200
-    width: 200
+  logo: /images/generic_logo.png
   licence:
     copyright: 2016
     name: Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International Licence

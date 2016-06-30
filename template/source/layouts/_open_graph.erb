@@ -9,22 +9,12 @@
 		<meta property="og:site_name" content="<%= strip_tags(data.settings.site.name) %>" />
 		<meta property="og:title" content="<%= meta_title %>" />
 		<meta property="og:description" content="<%= meta_description %>" />
-	<% if current_article && image_mediatype(current_resource.data.thumbnail.url) == 'image/gif' || current_article && image_mediatype(current_resource.data.thumbnail.url) == 'image/jpeg' || current_article && image_mediatype(current_resource.data.thumbnail.url) == 'image/png' # image check %>
-		<meta property="og:image" content="<%= absolute_url(current_resource.data.thumbnail.url) %>" />
-		<meta property="og:image:secure_url" content="<%= absolute_url(current_resource.data.thumbnail.url) %>" />
-		<meta property="og:image:type" content="<%= image_mediatype(current_resource.data.thumbnail.url) %>" />
-			<% if current_resource.data.thumbnail.height && current_resource.data.thumbnail.width # has dimensions %>
-		<meta property="og:image:width" content="<%= current_resource.data.thumbnail.width %>" />
-		<meta property="og:image:height" content="<%= current_resource.data.thumbnail.height %>" />
-			<% end # has dimensions %>
-	<% elsif image_mediatype(data.settings.site.logo.url) == 'image/gif' || image_mediatype(data.settings.site.logo.url) == 'image/jpeg' || image_mediatype(data.settings.site.logo.url) == 'image/png' # site logo %>
-		<meta property="og:image" content="<%= absolute_url(data.settings.site.logo.url) %>" />
-		<meta property="og:image:secure_url" content="<%= absolute_url(data.settings.site.logo.url) %>" />
-		<meta property="og:image:type" content="<%= image_mediatype(data.settings.site.logo.url) %>" />
-		<% if data.settings.site.logo.height && data.settings.site.logo.width # has dimensions %>
-		<meta property="og:image:width" content="<%= data.settings.site.logo.width %>" />
-		<meta property="og:image:height" content="<%= data.settings.site.logo.height %>" />
-		<% end # has dimensions %>
+	<% if current_article && current_resource.data.thumbnail # image check %>
+		<meta property="og:image" content="<%= absolute_url(current_resource.data.thumbnail) %>" />
+		<meta property="og:image:secure_url" content="<%= absolute_url(current_resource.data.thumbnail) %>" />
+	<% elsif data.settings.site.logo # site logo %>
+		<meta property="og:image" content="<%= absolute_url(data.settings.site.logo) %>" />
+		<meta property="og:image:secure_url" content="<%= absolute_url(data.settings.site.logo) %>" />
 	<% end # image %>
 	<% if current_article # article loop %>
 		<meta property="og:type" content="article" />
