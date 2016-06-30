@@ -14,7 +14,7 @@ site:
     url: https://creativecommons.org/licenses/by-nc-sa/4.0/
 author:
   name: Example author
-  home_page: http://example.com
+  homepage: http://example.com
   e_mail: example@example.com
   twitter: example # excluding '@' symbol
 open_graph:
