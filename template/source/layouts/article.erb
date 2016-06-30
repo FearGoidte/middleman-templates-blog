@@ -9,7 +9,7 @@
 <% if ((File.mtime(current_page.source_file) - current_article.date) / 86400) > 7 %>
 	<p>Last updated: <time property="dcterms:modified  schema:dateModified" datetime="<%= File.mtime(current_page.source_file).iso8601 %>"><%= prettify_date(File.mtime(current_page.source_file)) %></time></p>
 <% end %>
-	<% if current_article.tags %>
+	<% unless current_article.tags.empty? %>
 	<dl>
 		<dt>Tagged with</dt>
 		<% current_article.tags.sort{ |a,b| a.to_s.downcase <=> b.to_s.downcase }.each do |tag| %>
